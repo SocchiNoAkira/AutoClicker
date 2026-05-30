@@ -1,0 +1,19 @@
+# .NET
+bin/
+obj/
+*.user
+*.suo
+.vs/
+
+# 打包输出
+dist/
+*.exe
+
+# IDE
+.idea/
+.vscode/
+*.sln.iml
+
+# OS
+.DS_Store
+Thumbs.db

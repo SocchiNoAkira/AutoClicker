@@ -19,13 +19,9 @@
 - **干净关闭**：关窗口立刻停止点击并退出，不会残留后台进程
 - **覆盖层超时**：选取位置的界面如果 1 分钟无操作，自动关闭避免卡住
 
-## 下载
+## 安装与构建
 
-从 [Releases](../../releases) 下载 `AutoClicker.exe`，双击即可运行，不需要安装 .NET。
-
-exe 为自包含打包（约 150MB，内含 .NET 8 运行时）。仅支持 Windows x64。
-
-## 从源码构建
+本项目不提供预编译的 exe 下载（自包含打包约 150MB，超出 GitHub 文件限制）。请按以下步骤自行构建。
 
 ### 前置条件
 
@@ -51,7 +47,7 @@ cd AutoClicker
 build.bat
 ```
 
-输出文件：`dist\AutoClicker.exe`
+构建完成后，`dist\AutoClicker.exe` 即为可执行文件，双击运行，无需额外安装 .NET Runtime。
 
 ### 手动构建
 
@@ -70,7 +66,7 @@ dotnet publish AutoClicker/AutoClicker.csproj ^
 | `SelfContained` | 内含 .NET 运行时，用户无需额外安装 |
 | `IncludeNativeLibrariesForSelfExtract` | 将原生 DLL 也打包进 exe |
 
-如需缩小体积（约 1MB），可将 `SelfContained` 设为 `false`，但用户需自行安装 [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0)。
+如需缩小体积（约 1MB），可将 `SelfContained` 设为 `false`，但运行时需安装 [.NET 8 Desktop Runtime](https://dotnet.microsoft.com/download/dotnet/8.0)。
 
 ## 使用方法
 
